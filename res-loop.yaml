@@ -1,0 +1,7 @@
+name: Resume Processor
+description: Processes all resumes and uploaded results to a spreadsheet
+
+steps:
+  - step: For each resume pdf in the directory /Users/cjellick/projects/experiment-otto, run the Resume Grader workflow
+    workflows:
+    - Resume Grader
