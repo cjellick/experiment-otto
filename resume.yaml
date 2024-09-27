@@ -4,7 +4,6 @@ prompt: You are processing a resume to extract data to help evaluate candidates.
 tools:
   - "github.com/gptscript-ai/pdf-tool/openai"
   - "github.com/gptscript-ai/browser"
-  - "github.com/gptscript-ai/tools/apis/google/sheets/write"
   - "sys.read"
 params:
   resume-file: The location of the resume file
@@ -12,6 +11,13 @@ steps:
   - step: Read the resume criteria found in /Users/cjellick/projects/experiment-otto/criteria.txt
   - step: Use OCR to read the supplied resume to get Full name, LinkedIn profile URL, GitHub profile URL, and information relevant to the criteria from the last step.
   - step: Read the supplied resume and evaluate how closely they meet the criteria. Concisely address whether they meet each critieria. Be brief. Also return a count of the number of criteria they passed and the total number of criteria.
-  - step: "If you found a github profile URL in the resume, use search-website to find the following info: their number of contributions this year, whether they've contributed to any public repos this year."
-  - step: "Write a new row to this gogole sheet: https://docs.google.com/spreadsheets/d/1feB6bl2oiQ40WITGHyy_YyOMkRKC7q8X5pwVNaVs5zk/edit?usp=sharing. Include Full name, LinkedIn URL, Criteria sucess ratio (# passed / # total criteria), Criteria Summary, GitHub URL, Whether they're an opensource contributor, Total contributions for the year. Make the Criteria Summary newline separated. Read the sheet first to get the columns right."
+  - if:
+      condition: You found a GitHub profile URL in the resume
+      steps:
+      - step: "Use the browser tool to go to the GitHub profile URL and find the following info: their number of contributions this year, whether they've contributed to any public repos this year."
+  - template:
+      name: https://raw.githubusercontent.com/cjellick/step-templates/refs/heads/main/google-sheets-write-row.gpt
+      args:
+        URL: "https://docs.google.com/spreadsheets/d/1feB6bl2oiQ40WITGHyy_YyOMkRKC7q8X5pwVNaVs5zk/edit?usp=sharing"
+        Data: "Full name, LinkedIn URL, Criteria sucess ratio (# passed / # total criteria), Criteria Summary, GitHub URL, Whether they're an opensource contributor, Total contributions for the year. Make the Criteria Summary newline separated. Use the value <UNKNOWN> if you don't have a value for a field. Use Yes and No for TRUE/FALSE values"
 output: "Return whether you successfully wrote to the sheet and the info you wrote."
