@@ -1,20 +1,22 @@
 name: Resume Grader
-description: Grades Resumes
-prompt: You are processing a resume to extract data to help evaluate candidates. Your result will ultimately be used to populate a spreadsheet.
-tools:
-  - "github.com/gptscript-ai/pdf-tool/openai"
-  - "github.com/gptscript-ai/browser"
-  - "sys.read"
+description: Grades Resumes based on a set of criteria and uploads the results to a Google Sheet
 params:
   resume-file: The location of the resume file
+  criteria: The criteria used to evaluate the resume
 steps:
-  - step: Read the resume criteria found in /Users/cjellick/projects/experiment-otto/criteria.txt
-  - step: Use OCR to read the supplied resume to get Full name, LinkedIn profile URL, GitHub profile URL, and information relevant to the criteria from the last step.
-  - step: Read the supplied resume and evaluate how closely they meet the criteria. Concisely address whether they meet each critieria. Be brief. Also return a count of the number of criteria they passed and the total number of criteria.
+  # - step: pick a random number
+  - template:
+      name: https://raw.githubusercontent.com/cjellick/step-templates/refs/heads/main/pdf-data-extractor.gpt
+      args:
+        Data: Full name, LinkedIn profile URL, GitHub profile URL, and information relevant to the supplied criteria.
+        PDF: The supplied resume
+  - step: Evaluate how closely they meet the criteria. Concisely address whether they meet each critieria. Be brief. Also return a count of the number of criteria they passed and the total number of criteria.
   - if:
       condition: You found a GitHub profile URL in the resume
       steps:
       - step: "Use the browser tool to go to the GitHub profile URL and find the following info: their number of contributions this year, whether they've contributed to any public repos this year."
+        tools:
+          - "github.com/gptscript-ai/browser"
   - template:
       name: https://raw.githubusercontent.com/cjellick/step-templates/refs/heads/main/google-sheets-write-row.gpt
       args:
