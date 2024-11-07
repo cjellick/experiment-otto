@@ -1,0 +1,480 @@
+2024/11/07 16:56:16 INFO Starting document loader flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json phase=parse stage=documentloader status=starting
+2024/11/07 16:56:16 INFO Loaded documents flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json phase=parse stage=documentloader status=completed num_documents=1
+2024/11/07 16:56:16 INFO Starting text splitter flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json phase=parse stage=textsplitter num_documents=1 splitter=lcgo_text status=starting
+2024/11/07 16:56:16 INFO Split documents flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json phase=parse stage=textsplitter num_documents=1 splitter=lcgo_text status=completed new_num_documents=3
+2024/11/07 16:56:16 INFO Starting document transformers flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json phase=parse stage=transformer num_documents=3 num_transformers=1 status=starting
+2024/11/07 16:56:16 INFO Running transformer flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json transformer=extra_metadata progress=1/1 progress_unit=transformations
+2024/11/07 16:56:16 INFO Transformed documents flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json transformer=extra_metadata progress=1/1 progress_unit=transformations status=completed num_documents=3
+2024/11/07 16:56:16 INFO Transformed documents flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json phase=parse stage=transformer num_documents=3 num_transformers=1 status=completed new_num_documents=3
+2024/11/07 16:56:16 INFO Removing document documentID=\"\" collection=default/kst1-a1qnc9d where=map[absPath:ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json] existingDocs=118
+2024/11/07 16:56:16 ERROR Failed to add documents flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json phase=store filename=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filetype=.json num_documents=3 component=vectorstore status=failed error=\"failed to embed document f8ee9efb-473d-409f-b55c-4471bc484cb2: error sending request(s): requesting embeddings - retry limit (5) exceeded or failed with non-retriable error: #1/5: 403 \u003C\u003C!DOCTYPE html\u003E\
+\u003C!--[if lt IE 7]\u003E \u003Chtml class=\\\"no-js ie6 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 7]\u003E    \u003Chtml class=\\\"no-js ie7 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 8]\u003E    \u003Chtml class=\\\"no-js ie8 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if gt IE 8]\u003E\u003C!--\u003E \u003Chtml class=\\\"no-js\\\" lang=\\\"en-US\\\"\u003E \u003C!--\u003C![endif]--\u003E\
+\u003Chead\u003E\
+\u003Ctitle\u003EAttention Required! | Cloudflare\u003C/title\u003E\
+\u003Cmeta charset=\\\"UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=Edge\\\" /\u003E\
+\u003Cmeta name=\\\"robots\\\" content=\\\"noindex, nofollow\\\" /\u003E\
+\u003Cmeta name=\\\"viewport\\\" content=\\\"width=device-width,initial-scale=1\\\" /\u003E\
+\u003Clink rel=\\\"stylesheet\\\" id=\\\"cf_styles-css\\\" href=\\\"/cdn-cgi/styles/cf.errors.css\\\" /\u003E\
+\u003C!--[if lt IE 9]\u003E\u003Clink rel=\\\"stylesheet\\\" id='cf_styles-ie-css' href=\\\"/cdn-cgi/styles/cf.errors.ie.css\\\" /\u003E\u003C![endif]--\u003E\
+\u003Cstyle\u003Ebody{margin:0;padding:0}\u003C/style\u003E\
+\
+\
+\u003C!--[if gte IE 10]\u003E\u003C!--\u003E\
+\u003Cscript\u003E\
+  if (!navigator.cookieEnabled) {\
+    window.addEventListener('DOMContentLoaded', function () {\
+      var cookieEl = document.getElementById('cookie-alert');\
+      cookieEl.style.display = 'block';\
+    })\
+  }\
+\u003C/script\u003E\
+\u003C!--\u003C![endif]--\u003E\
+\
+\
+\u003C/head\u003E\
+\u003Cbody\u003E\
+  \u003Cdiv id=\\\"cf-wrapper\\\"\u003E\
+    \u003Cdiv class=\\\"cf-alert cf-alert-error cf-cookie-error\\\" id=\\\"cookie-alert\\\" data-translate=\\\"enable_cookies\\\"\u003EPlease enable cookies.\u003C/div\u003E\
+    \u003Cdiv id=\\\"cf-error-details\\\" class=\\\"cf-error-details-wrapper\\\"\u003E\
+      \u003Cdiv class=\\\"cf-wrapper cf-header cf-error-overview\\\"\u003E\
+        \u003Ch1 data-translate=\\\"block_headline\\\"\u003ESorry, you have been blocked\u003C/h1\u003E\
+        \u003Ch2 class=\\\"cf-subheadline\\\"\u003E\u003Cspan data-translate=\\\"unable_to_access\\\"\u003EYou are unable to access\u003C/span\u003E onrender.com\u003C/h2\u003E\
+      \u003C/div\u003E\u003C!-- /.header --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-highlight\\\"\u003E\
+        \u003Cdiv class=\\\"cf-wrapper\\\"\u003E\
+          \u003Cdiv class=\\\"cf-screenshot-container cf-screenshot-full\\\"\u003E\
+            \
+              \u003Cspan class=\\\"cf-no-screenshot error\\\"\u003E\u003C/span\u003E\
+            \
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.captcha-container --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-wrapper\\\"\u003E\
+        \u003Cdiv class=\\\"cf-columns two\\\"\u003E\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_why_headline\\\"\u003EWhy have I been blocked?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_why_detail\\\"\u003EThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\u003C/p\u003E\
+          \u003C/div\u003E\
+\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_resolve_headline\\\"\u003EWhat can I do to resolve this?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_resolve_detail\\\"\u003EYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.\u003C/p\u003E\
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.section --\u003E\
+\
+      \u003Cdiv class=\\\"cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300\\\"\u003E\
+  \u003Cp class=\\\"text-13\\\"\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003ECloudflare Ray ID: \u003Cstrong class=\\\"font-semibold\\\"\u003E8deedb0f2ebb13a7\u003C/strong\u003E\u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003Cspan id=\\\"cf-footer-item-ip\\\" class=\\\"cf-footer-item hidden sm:block sm:mb-1\\\"\u003E\
+      Your IP:\
+      \u003Cbutton type=\\\"button\\\" id=\\\"cf-footer-ip-reveal\\\" class=\\\"cf-footer-ip-reveal-btn\\\"\u003EClick to reveal\u003C/button\u003E\
+      \u003Cspan class=\\\"hidden\\\" id=\\\"cf-footer-ip\\\"\u003E3.129.111.220\u003C/span\u003E\
+      \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003E\u003Cspan\u003EPerformance &amp; security by\u003C/span\u003E \u003Ca rel=\\\"noopener noreferrer\\\" href=\\\"https://www.cloudflare.com/5xx-error-landing\\\" id=\\\"brand_link\\\" target=\\\"_blank\\\"\u003ECloudflare\u003C/a\u003E\u003C/span\u003E\
+    \
+  \u003C/p\u003E\
+  \u003Cscript\u003E(function(){function d(){var b=a.getElementById(\\\"cf-footer-item-ip\\\"),c=a.getElementById(\\\"cf-footer-ip-reveal\\\");b&&\\\"classList\\\"in b&&(b.classList.remove(\\\"hidden\\\"),c.addEventListener(\\\"click\\\",function(){c.classList.add(\\\"hidden\\\");a.getElementById(\\\"cf-footer-ip\\\").classList.remove(\\\"hidden\\\")}))}var a=document;document.addEventListener&&a.addEventListener(\\\"DOMContentLoaded\\\",d)})();\u003C/script\u003E\
+\u003C/div\u003E\u003C!-- /.error-footer --\u003E\
+\
+\
+    \u003C/div\u003E\u003C!-- /#cf-error-details --\u003E\
+  \u003C/div\u003E\u003C!-- /#cf-wrapper --\u003E\
+\
+  \u003Cscript\u003E\
+  window._cf_translation = {};\
+  \
+  \
+\u003C/script\u003E\
+\
+\u003C/body\u003E\
+\u003C/html\u003E\
+\u003E (err: \u003Cnil\u003E)\"
+2024/11/07 16:56:16 ERROR Ingest failed flow=ingestion rootPath=ws://.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json filepath=.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json absolute_path=ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json status=failed error=\"failed to add documents from file \\\"ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json\\\": failed to embed document f8ee9efb-473d-409f-b55c-4471bc484cb2: error sending request(s): requesting embeddings - retry limit (5) exceeded or failed with non-retriable error: #1/5: 403 \u003C\u003C!DOCTYPE html\u003E\
+\u003C!--[if lt IE 7]\u003E \u003Chtml class=\\\"no-js ie6 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 7]\u003E    \u003Chtml class=\\\"no-js ie7 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 8]\u003E    \u003Chtml class=\\\"no-js ie8 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if gt IE 8]\u003E\u003C!--\u003E \u003Chtml class=\\\"no-js\\\" lang=\\\"en-US\\\"\u003E \u003C!--\u003C![endif]--\u003E\
+\u003Chead\u003E\
+\u003Ctitle\u003EAttention Required! | Cloudflare\u003C/title\u003E\
+\u003Cmeta charset=\\\"UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=Edge\\\" /\u003E\
+\u003Cmeta name=\\\"robots\\\" content=\\\"noindex, nofollow\\\" /\u003E\
+\u003Cmeta name=\\\"viewport\\\" content=\\\"width=device-width,initial-scale=1\\\" /\u003E\
+\u003Clink rel=\\\"stylesheet\\\" id=\\\"cf_styles-css\\\" href=\\\"/cdn-cgi/styles/cf.errors.css\\\" /\u003E\
+\u003C!--[if lt IE 9]\u003E\u003Clink rel=\\\"stylesheet\\\" id='cf_styles-ie-css' href=\\\"/cdn-cgi/styles/cf.errors.ie.css\\\" /\u003E\u003C![endif]--\u003E\
+\u003Cstyle\u003Ebody{margin:0;padding:0}\u003C/style\u003E\
+\
+\
+\u003C!--[if gte IE 10]\u003E\u003C!--\u003E\
+\u003Cscript\u003E\
+  if (!navigator.cookieEnabled) {\
+    window.addEventListener('DOMContentLoaded', function () {\
+      var cookieEl = document.getElementById('cookie-alert');\
+      cookieEl.style.display = 'block';\
+    })\
+  }\
+\u003C/script\u003E\
+\u003C!--\u003C![endif]--\u003E\
+\
+\
+\u003C/head\u003E\
+\u003Cbody\u003E\
+  \u003Cdiv id=\\\"cf-wrapper\\\"\u003E\
+    \u003Cdiv class=\\\"cf-alert cf-alert-error cf-cookie-error\\\" id=\\\"cookie-alert\\\" data-translate=\\\"enable_cookies\\\"\u003EPlease enable cookies.\u003C/div\u003E\
+    \u003Cdiv id=\\\"cf-error-details\\\" class=\\\"cf-error-details-wrapper\\\"\u003E\
+      \u003Cdiv class=\\\"cf-wrapper cf-header cf-error-overview\\\"\u003E\
+        \u003Ch1 data-translate=\\\"block_headline\\\"\u003ESorry, you have been blocked\u003C/h1\u003E\
+        \u003Ch2 class=\\\"cf-subheadline\\\"\u003E\u003Cspan data-translate=\\\"unable_to_access\\\"\u003EYou are unable to access\u003C/span\u003E onrender.com\u003C/h2\u003E\
+      \u003C/div\u003E\u003C!-- /.header --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-highlight\\\"\u003E\
+        \u003Cdiv class=\\\"cf-wrapper\\\"\u003E\
+          \u003Cdiv class=\\\"cf-screenshot-container cf-screenshot-full\\\"\u003E\
+            \
+              \u003Cspan class=\\\"cf-no-screenshot error\\\"\u003E\u003C/span\u003E\
+            \
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.captcha-container --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-wrapper\\\"\u003E\
+        \u003Cdiv class=\\\"cf-columns two\\\"\u003E\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_why_headline\\\"\u003EWhy have I been blocked?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_why_detail\\\"\u003EThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\u003C/p\u003E\
+          \u003C/div\u003E\
+\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_resolve_headline\\\"\u003EWhat can I do to resolve this?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_resolve_detail\\\"\u003EYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.\u003C/p\u003E\
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.section --\u003E\
+\
+      \u003Cdiv class=\\\"cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300\\\"\u003E\
+  \u003Cp class=\\\"text-13\\\"\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003ECloudflare Ray ID: \u003Cstrong class=\\\"font-semibold\\\"\u003E8deedb0f2ebb13a7\u003C/strong\u003E\u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003Cspan id=\\\"cf-footer-item-ip\\\" class=\\\"cf-footer-item hidden sm:block sm:mb-1\\\"\u003E\
+      Your IP:\
+      \u003Cbutton type=\\\"button\\\" id=\\\"cf-footer-ip-reveal\\\" class=\\\"cf-footer-ip-reveal-btn\\\"\u003EClick to reveal\u003C/button\u003E\
+      \u003Cspan class=\\\"hidden\\\" id=\\\"cf-footer-ip\\\"\u003E3.129.111.220\u003C/span\u003E\
+      \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003E\u003Cspan\u003EPerformance &amp; security by\u003C/span\u003E \u003Ca rel=\\\"noopener noreferrer\\\" href=\\\"https://www.cloudflare.com/5xx-error-landing\\\" id=\\\"brand_link\\\" target=\\\"_blank\\\"\u003ECloudflare\u003C/a\u003E\u003C/span\u003E\
+    \
+  \u003C/p\u003E\
+  \u003Cscript\u003E(function(){function d(){var b=a.getElementById(\\\"cf-footer-item-ip\\\"),c=a.getElementById(\\\"cf-footer-ip-reveal\\\");b&&\\\"classList\\\"in b&&(b.classList.remove(\\\"hidden\\\"),c.addEventListener(\\\"click\\\",function(){c.classList.add(\\\"hidden\\\");a.getElementById(\\\"cf-footer-ip\\\").classList.remove(\\\"hidden\\\")}))}var a=document;document.addEventListener&&a.addEventListener(\\\"DOMContentLoaded\\\",d)})();\u003C/script\u003E\
+\u003C/div\u003E\u003C!-- /.error-footer --\u003E\
+\
+\
+    \u003C/div\u003E\u003C!-- /#cf-error-details --\u003E\
+  \u003C/div\u003E\u003C!-- /#cf-wrapper --\u003E\
+\
+  \u003Cscript\u003E\
+  window._cf_translation = {};\
+  \
+  \
+\u003C/script\u003E\
+\
+\u003C/body\u003E\
+\u003C/html\u003E\
+\u003E (err: \u003Cnil\u003E)\"
+2024/11/07 16:56:16 ERROR Failed to ingest files error=\"failed to add documents from file \\\"ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json\\\": failed to embed document f8ee9efb-473d-409f-b55c-4471bc484cb2: error sending request(s): requesting embeddings - retry limit (5) exceeded or failed with non-retriable error: #1/5: 403 \u003C\u003C!DOCTYPE html\u003E\
+\u003C!--[if lt IE 7]\u003E \u003Chtml class=\\\"no-js ie6 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 7]\u003E    \u003Chtml class=\\\"no-js ie7 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 8]\u003E    \u003Chtml class=\\\"no-js ie8 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if gt IE 8]\u003E\u003C!--\u003E \u003Chtml class=\\\"no-js\\\" lang=\\\"en-US\\\"\u003E \u003C!--\u003C![endif]--\u003E\
+\u003Chead\u003E\
+\u003Ctitle\u003EAttention Required! | Cloudflare\u003C/title\u003E\
+\u003Cmeta charset=\\\"UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=Edge\\\" /\u003E\
+\u003Cmeta name=\\\"robots\\\" content=\\\"noindex, nofollow\\\" /\u003E\
+\u003Cmeta name=\\\"viewport\\\" content=\\\"width=device-width,initial-scale=1\\\" /\u003E\
+\u003Clink rel=\\\"stylesheet\\\" id=\\\"cf_styles-css\\\" href=\\\"/cdn-cgi/styles/cf.errors.css\\\" /\u003E\
+\u003C!--[if lt IE 9]\u003E\u003Clink rel=\\\"stylesheet\\\" id='cf_styles-ie-css' href=\\\"/cdn-cgi/styles/cf.errors.ie.css\\\" /\u003E\u003C![endif]--\u003E\
+\u003Cstyle\u003Ebody{margin:0;padding:0}\u003C/style\u003E\
+\
+\
+\u003C!--[if gte IE 10]\u003E\u003C!--\u003E\
+\u003Cscript\u003E\
+  if (!navigator.cookieEnabled) {\
+    window.addEventListener('DOMContentLoaded', function () {\
+      var cookieEl = document.getElementById('cookie-alert');\
+      cookieEl.style.display = 'block';\
+    })\
+  }\
+\u003C/script\u003E\
+\u003C!--\u003C![endif]--\u003E\
+\
+\
+\u003C/head\u003E\
+\u003Cbody\u003E\
+  \u003Cdiv id=\\\"cf-wrapper\\\"\u003E\
+    \u003Cdiv class=\\\"cf-alert cf-alert-error cf-cookie-error\\\" id=\\\"cookie-alert\\\" data-translate=\\\"enable_cookies\\\"\u003EPlease enable cookies.\u003C/div\u003E\
+    \u003Cdiv id=\\\"cf-error-details\\\" class=\\\"cf-error-details-wrapper\\\"\u003E\
+      \u003Cdiv class=\\\"cf-wrapper cf-header cf-error-overview\\\"\u003E\
+        \u003Ch1 data-translate=\\\"block_headline\\\"\u003ESorry, you have been blocked\u003C/h1\u003E\
+        \u003Ch2 class=\\\"cf-subheadline\\\"\u003E\u003Cspan data-translate=\\\"unable_to_access\\\"\u003EYou are unable to access\u003C/span\u003E onrender.com\u003C/h2\u003E\
+      \u003C/div\u003E\u003C!-- /.header --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-highlight\\\"\u003E\
+        \u003Cdiv class=\\\"cf-wrapper\\\"\u003E\
+          \u003Cdiv class=\\\"cf-screenshot-container cf-screenshot-full\\\"\u003E\
+            \
+              \u003Cspan class=\\\"cf-no-screenshot error\\\"\u003E\u003C/span\u003E\
+            \
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.captcha-container --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-wrapper\\\"\u003E\
+        \u003Cdiv class=\\\"cf-columns two\\\"\u003E\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_why_headline\\\"\u003EWhy have I been blocked?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_why_detail\\\"\u003EThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\u003C/p\u003E\
+          \u003C/div\u003E\
+\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_resolve_headline\\\"\u003EWhat can I do to resolve this?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_resolve_detail\\\"\u003EYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.\u003C/p\u003E\
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.section --\u003E\
+\
+      \u003Cdiv class=\\\"cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300\\\"\u003E\
+  \u003Cp class=\\\"text-13\\\"\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003ECloudflare Ray ID: \u003Cstrong class=\\\"font-semibold\\\"\u003E8deedb0f2ebb13a7\u003C/strong\u003E\u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003Cspan id=\\\"cf-footer-item-ip\\\" class=\\\"cf-footer-item hidden sm:block sm:mb-1\\\"\u003E\
+      Your IP:\
+      \u003Cbutton type=\\\"button\\\" id=\\\"cf-footer-ip-reveal\\\" class=\\\"cf-footer-ip-reveal-btn\\\"\u003EClick to reveal\u003C/button\u003E\
+      \u003Cspan class=\\\"hidden\\\" id=\\\"cf-footer-ip\\\"\u003E3.129.111.220\u003C/span\u003E\
+      \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003E\u003Cspan\u003EPerformance &amp; security by\u003C/span\u003E \u003Ca rel=\\\"noopener noreferrer\\\" href=\\\"https://www.cloudflare.com/5xx-error-landing\\\" id=\\\"brand_link\\\" target=\\\"_blank\\\"\u003ECloudflare\u003C/a\u003E\u003C/span\u003E\
+    \
+  \u003C/p\u003E\
+  \u003Cscript\u003E(function(){function d(){var b=a.getElementById(\\\"cf-footer-item-ip\\\"),c=a.getElementById(\\\"cf-footer-ip-reveal\\\");b&&\\\"classList\\\"in b&&(b.classList.remove(\\\"hidden\\\"),c.addEventListener(\\\"click\\\",function(){c.classList.add(\\\"hidden\\\");a.getElementById(\\\"cf-footer-ip\\\").classList.remove(\\\"hidden\\\")}))}var a=document;document.addEventListener&&a.addEventListener(\\\"DOMContentLoaded\\\",d)})();\u003C/script\u003E\
+\u003C/div\u003E\u003C!-- /.error-footer --\u003E\
+\
+\
+    \u003C/div\u003E\u003C!-- /#cf-error-details --\u003E\
+  \u003C/div\u003E\u003C!-- /#cf-wrapper --\u003E\
+\
+  \u003Cscript\u003E\
+  window._cf_translation = {};\
+  \
+  \
+\u003C/script\u003E\
+\
+\u003C/body\u003E\
+\u003C/html\u003E\
+\u003E (err: \u003Cnil\u003E)\" succeeded=1 skippedUnsupported=0
+{\"error\": \"ingestion failed for at least one file: failed to add documents from file \\\"ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json\\\": failed to embed document f8ee9efb-473d-409f-b55c-4471bc484cb2: error sending request(s): requesting embeddings - retry limit (5) exceeded or failed with non-retriable error: #1/5: 403 \u003C\u003C!DOCTYPE html\u003E\
+\u003C!--[if lt IE 7]\u003E \u003Chtml class=\\\"no-js ie6 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 7]\u003E    \u003Chtml class=\\\"no-js ie7 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 8]\u003E    \u003Chtml class=\\\"no-js ie8 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if gt IE 8]\u003E\u003C!--\u003E \u003Chtml class=\\\"no-js\\\" lang=\\\"en-US\\\"\u003E \u003C!--\u003C![endif]--\u003E\
+\u003Chead\u003E\
+\u003Ctitle\u003EAttention Required! | Cloudflare\u003C/title\u003E\
+\u003Cmeta charset=\\\"UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=Edge\\\" /\u003E\
+\u003Cmeta name=\\\"robots\\\" content=\\\"noindex, nofollow\\\" /\u003E\
+\u003Cmeta name=\\\"viewport\\\" content=\\\"width=device-width,initial-scale=1\\\" /\u003E\
+\u003Clink rel=\\\"stylesheet\\\" id=\\\"cf_styles-css\\\" href=\\\"/cdn-cgi/styles/cf.errors.css\\\" /\u003E\
+\u003C!--[if lt IE 9]\u003E\u003Clink rel=\\\"stylesheet\\\" id='cf_styles-ie-css' href=\\\"/cdn-cgi/styles/cf.errors.ie.css\\\" /\u003E\u003C![endif]--\u003E\
+\u003Cstyle\u003Ebody{margin:0;padding:0}\u003C/style\u003E\
+\
+\
+\u003C!--[if gte IE 10]\u003E\u003C!--\u003E\
+\u003Cscript\u003E\
+  if (!navigator.cookieEnabled) {\
+    window.addEventListener('DOMContentLoaded', function () {\
+      var cookieEl = document.getElementById('cookie-alert');\
+      cookieEl.style.display = 'block';\
+    })\
+  }\
+\u003C/script\u003E\
+\u003C!--\u003C![endif]--\u003E\
+\
+\
+\u003C/head\u003E\
+\u003Cbody\u003E\
+  \u003Cdiv id=\\\"cf-wrapper\\\"\u003E\
+    \u003Cdiv class=\\\"cf-alert cf-alert-error cf-cookie-error\\\" id=\\\"cookie-alert\\\" data-translate=\\\"enable_cookies\\\"\u003EPlease enable cookies.\u003C/div\u003E\
+    \u003Cdiv id=\\\"cf-error-details\\\" class=\\\"cf-error-details-wrapper\\\"\u003E\
+      \u003Cdiv class=\\\"cf-wrapper cf-header cf-error-overview\\\"\u003E\
+        \u003Ch1 data-translate=\\\"block_headline\\\"\u003ESorry, you have been blocked\u003C/h1\u003E\
+        \u003Ch2 class=\\\"cf-subheadline\\\"\u003E\u003Cspan data-translate=\\\"unable_to_access\\\"\u003EYou are unable to access\u003C/span\u003E onrender.com\u003C/h2\u003E\
+      \u003C/div\u003E\u003C!-- /.header --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-highlight\\\"\u003E\
+        \u003Cdiv class=\\\"cf-wrapper\\\"\u003E\
+          \u003Cdiv class=\\\"cf-screenshot-container cf-screenshot-full\\\"\u003E\
+            \
+              \u003Cspan class=\\\"cf-no-screenshot error\\\"\u003E\u003C/span\u003E\
+            \
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.captcha-container --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-wrapper\\\"\u003E\
+        \u003Cdiv class=\\\"cf-columns two\\\"\u003E\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_why_headline\\\"\u003EWhy have I been blocked?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_why_detail\\\"\u003EThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\u003C/p\u003E\
+          \u003C/div\u003E\
+\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_resolve_headline\\\"\u003EWhat can I do to resolve this?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_resolve_detail\\\"\u003EYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.\u003C/p\u003E\
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.section --\u003E\
+\
+      \u003Cdiv class=\\\"cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300\\\"\u003E\
+  \u003Cp class=\\\"text-13\\\"\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003ECloudflare Ray ID: \u003Cstrong class=\\\"font-semibold\\\"\u003E8deedb0f2ebb13a7\u003C/strong\u003E\u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003Cspan id=\\\"cf-footer-item-ip\\\" class=\\\"cf-footer-item hidden sm:block sm:mb-1\\\"\u003E\
+      Your IP:\
+      \u003Cbutton type=\\\"button\\\" id=\\\"cf-footer-ip-reveal\\\" class=\\\"cf-footer-ip-reveal-btn\\\"\u003EClick to reveal\u003C/button\u003E\
+      \u003Cspan class=\\\"hidden\\\" id=\\\"cf-footer-ip\\\"\u003E3.129.111.220\u003C/span\u003E\
+      \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003E\u003Cspan\u003EPerformance &amp; security by\u003C/span\u003E \u003Ca rel=\\\"noopener noreferrer\\\" href=\\\"https://www.cloudflare.com/5xx-error-landing\\\" id=\\\"brand_link\\\" target=\\\"_blank\\\"\u003ECloudflare\u003C/a\u003E\u003C/span\u003E\
+    \
+  \u003C/p\u003E\
+  \u003Cscript\u003E(function(){function d(){var b=a.getElementById(\\\"cf-footer-item-ip\\\"),c=a.getElementById(\\\"cf-footer-ip-reveal\\\");b&&\\\"classList\\\"in b&&(b.classList.remove(\\\"hidden\\\"),c.addEventListener(\\\"click\\\",function(){c.classList.add(\\\"hidden\\\");a.getElementById(\\\"cf-footer-ip\\\").classList.remove(\\\"hidden\\\")}))}var a=document;document.addEventListener&&a.addEventListener(\\\"DOMContentLoaded\\\",d)})();\u003C/script\u003E\
+\u003C/div\u003E\u003C!-- /.error-footer --\u003E\
+\
+\
+    \u003C/div\u003E\u003C!-- /#cf-error-details --\u003E\
+  \u003C/div\u003E\u003C!-- /#cf-wrapper --\u003E\
+\
+  \u003Cscript\u003E\
+  window._cf_translation = {};\
+  \
+  \
+\u003C/script\u003E\
+\
+\u003C/body\u003E\
+\u003C/html\u003E\
+\u003E (err: \u003Cnil\u003E)\"}
+",
+        "output": "{\"error\": \"ingestion failed for at least one file: failed to add documents from file \\\"ws://s3://test-otto8-workspaces/2b00fe66-5dc0-46a8-8bda-e3725b558e6b/.conversion/www.acorn.io/resources/learning-center/anthropic-claude.md.json\\\": failed to embed document f8ee9efb-473d-409f-b55c-4471bc484cb2: error sending request(s): requesting embeddings - retry limit (5) exceeded or failed with non-retriable error: #1/5: 403 \u003C\u003C!DOCTYPE html\u003E\
+\u003C!--[if lt IE 7]\u003E \u003Chtml class=\\\"no-js ie6 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 7]\u003E    \u003Chtml class=\\\"no-js ie7 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if IE 8]\u003E    \u003Chtml class=\\\"no-js ie8 oldie\\\" lang=\\\"en-US\\\"\u003E \u003C![endif]--\u003E\
+\u003C!--[if gt IE 8]\u003E\u003C!--\u003E \u003Chtml class=\\\"no-js\\\" lang=\\\"en-US\\\"\u003E \u003C!--\u003C![endif]--\u003E\
+\u003Chead\u003E\
+\u003Ctitle\u003EAttention Required! | Cloudflare\u003C/title\u003E\
+\u003Cmeta charset=\\\"UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=UTF-8\\\" /\u003E\
+\u003Cmeta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"IE=Edge\\\" /\u003E\
+\u003Cmeta name=\\\"robots\\\" content=\\\"noindex, nofollow\\\" /\u003E\
+\u003Cmeta name=\\\"viewport\\\" content=\\\"width=device-width,initial-scale=1\\\" /\u003E\
+\u003Clink rel=\\\"stylesheet\\\" id=\\\"cf_styles-css\\\" href=\\\"/cdn-cgi/styles/cf.errors.css\\\" /\u003E\
+\u003C!--[if lt IE 9]\u003E\u003Clink rel=\\\"stylesheet\\\" id='cf_styles-ie-css' href=\\\"/cdn-cgi/styles/cf.errors.ie.css\\\" /\u003E\u003C![endif]--\u003E\
+\u003Cstyle\u003Ebody{margin:0;padding:0}\u003C/style\u003E\
+\
+\
+\u003C!--[if gte IE 10]\u003E\u003C!--\u003E\
+\u003Cscript\u003E\
+  if (!navigator.cookieEnabled) {\
+    window.addEventListener('DOMContentLoaded', function () {\
+      var cookieEl = document.getElementById('cookie-alert');\
+      cookieEl.style.display = 'block';\
+    })\
+  }\
+\u003C/script\u003E\
+\u003C!--\u003C![endif]--\u003E\
+\
+\
+\u003C/head\u003E\
+\u003Cbody\u003E\
+  \u003Cdiv id=\\\"cf-wrapper\\\"\u003E\
+    \u003Cdiv class=\\\"cf-alert cf-alert-error cf-cookie-error\\\" id=\\\"cookie-alert\\\" data-translate=\\\"enable_cookies\\\"\u003EPlease enable cookies.\u003C/div\u003E\
+    \u003Cdiv id=\\\"cf-error-details\\\" class=\\\"cf-error-details-wrapper\\\"\u003E\
+      \u003Cdiv class=\\\"cf-wrapper cf-header cf-error-overview\\\"\u003E\
+        \u003Ch1 data-translate=\\\"block_headline\\\"\u003ESorry, you have been blocked\u003C/h1\u003E\
+        \u003Ch2 class=\\\"cf-subheadline\\\"\u003E\u003Cspan data-translate=\\\"unable_to_access\\\"\u003EYou are unable to access\u003C/span\u003E onrender.com\u003C/h2\u003E\
+      \u003C/div\u003E\u003C!-- /.header --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-highlight\\\"\u003E\
+        \u003Cdiv class=\\\"cf-wrapper\\\"\u003E\
+          \u003Cdiv class=\\\"cf-screenshot-container cf-screenshot-full\\\"\u003E\
+            \
+              \u003Cspan class=\\\"cf-no-screenshot error\\\"\u003E\u003C/span\u003E\
+            \
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.captcha-container --\u003E\
+\
+      \u003Cdiv class=\\\"cf-section cf-wrapper\\\"\u003E\
+        \u003Cdiv class=\\\"cf-columns two\\\"\u003E\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_why_headline\\\"\u003EWhy have I been blocked?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_why_detail\\\"\u003EThis website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data.\u003C/p\u003E\
+          \u003C/div\u003E\
+\
+          \u003Cdiv class=\\\"cf-column\\\"\u003E\
+            \u003Ch2 data-translate=\\\"blocked_resolve_headline\\\"\u003EWhat can I do to resolve this?\u003C/h2\u003E\
+\
+            \u003Cp data-translate=\\\"blocked_resolve_detail\\\"\u003EYou can email the site owner to let them know you were blocked. Please include what you were doing when this page came up and the Cloudflare Ray ID found at the bottom of this page.\u003C/p\u003E\
+          \u003C/div\u003E\
+        \u003C/div\u003E\
+      \u003C/div\u003E\u003C!-- /.section --\u003E\
+\
+      \u003Cdiv class=\\\"cf-error-footer cf-wrapper w-240 lg:w-full py-10 sm:py-4 sm:px-8 mx-auto text-center sm:text-left border-solid border-0 border-t border-gray-300\\\"\u003E\
+  \u003Cp class=\\\"text-13\\\"\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003ECloudflare Ray ID: \u003Cstrong class=\\\"font-semibold\\\"\u003E8deedb0f2ebb13a7\u003C/strong\u003E\u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003Cspan id=\\\"cf-footer-item-ip\\\" class=\\\"cf-footer-item hidden sm:block sm:mb-1\\\"\u003E\
+      Your IP:\
+      \u003Cbutton type=\\\"button\\\" id=\\\"cf-footer-ip-reveal\\\" class=\\\"cf-footer-ip-reveal-btn\\\"\u003EClick to reveal\u003C/button\u003E\
+      \u003Cspan class=\\\"hidden\\\" id=\\\"cf-footer-ip\\\"\u003E3.129.111.220\u003C/span\u003E\
+      \u003Cspan class=\\\"cf-footer-separator sm:hidden\\\"\u003E&bull;\u003C/span\u003E\
+    \u003C/span\u003E\
+    \u003Cspan class=\\\"cf-footer-item sm:block sm:mb-1\\\"\u003E\u003Cspan\u003EPerformance &amp; security by\u003C/span\u003E \u003Ca rel=\\\"noopener noreferrer\\\" href=\\\"https://www.cloudflare.com/5xx-error-landing\\\" id=\\\"brand_link\\\" target=\\\"_blank\\\"\u003ECloudflare\u003C/a\u003E\u003C/span\u003E\
+    \
+  \u003C/p\u003E\
+  \u003Cscript\u003E(function(){function d(){var b=a.getElementById(\\\"cf-footer-item-ip\\\"),c=a.getElementById(\\\"cf-footer-ip-reveal\\\");b&&\\\"classList\\\"in b&&(b.classList.remove(\\\"hidden\\\"),c.addEventListener(\\\"click\\\",function(){c.classList.add(\\\"hidden\\\");a.getElementById(\\\"cf-footer-ip\\\").classList.remove(\\\"hidden\\\")}))}var a=document;document.addEventListener&&a.addEventListener(\\\"DOMContentLoaded\\\",d)})();\u003C/script\u003E\
+\u003C/div\u003E\u003C!-- /.error-footer --\u003E\
+\
+\
+    \u003C/div\u003E\u003C!-- /#cf-error-details --\u003E\
+  \u003C/div\u003E\u003C!-- /#cf-wrapper --\u003E\
+\
+  \u003Cscript\u003E\
+  window._cf_translation = {};\
+  \
+  \
+\u003C/script\u003E\
+\
+\u003C/body\u003E\
+\u003C/html\u003E\
+\u003E (err: \u003Cnil\u003E)\"
